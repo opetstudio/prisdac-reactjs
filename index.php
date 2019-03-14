@@ -1,7 +1,7 @@
 <?php
 $server_uri = $_SERVER['REQUEST_URI'];
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$html = file_get_contents('./index.html');
+$html = file_get_contents('./react-index.html');
 if(preg_match('/(?:\/|\/home)$/', $_SERVER["REQUEST_URI"])){
     // home page
     $seo_tag = ["__OG_TYPE__", "__OG_SITE_NAME__", "__OG_IMAGE__", "__OG_TITLE__", "__OG_DESCRIPTION__", "__OG_URL__", "__OG_IMAGE_TYPE__", "__OG_IMAGE_WIDTH__", "__OG_IMAGE_HEIGHT__"];
